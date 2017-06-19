@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Run stylelint, copying in specific styleint rules
 
 # Test if already has a .stylelintrc file. If not, add a temporary one.
