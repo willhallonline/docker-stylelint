@@ -1,4 +1,4 @@
-FROM node
+FROM node:alpine
 MAINTAINER Will Hall <will@willhallonline.co.uk>
 
 # Get required stylelint packages
