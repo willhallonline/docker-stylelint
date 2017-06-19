@@ -1,9 +1,14 @@
 FROM node
 MAINTAINER Will Hall <will@willhallonline.co.uk>
 
-RUN npm install -g stylelint
+# Get required stylelint packages
+RUN npm install -g stylelint stylelint-config-standard
+
+# Setup stylelint entrypoint
+COPY ./stylelint.sh /root/stylelint.sh
+RUN chmod +x /root/stylelint.sh
 
 WORKDIR /app
 
-CMD ["stylelint"]
-
+# Entrypoint for creation of .stylelintrc if not in existence
+ENTRYPOINT ["/root/stylelint.sh"]
