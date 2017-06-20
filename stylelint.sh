@@ -6,7 +6,7 @@ if [ -f "/app/.stylelintrc" ]
 then
   stylelint_rc=true
 else
-  echo '{"extends": "/usr/local/lib/node_modules/stylelint-config-standard"}' > /app/.stylelintrc
+  mv /root/.stylelintrc /app/.stylelintrc
 fi
 
 stylelint "$@"
