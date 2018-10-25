@@ -10,7 +10,7 @@ A "mighty, modern linter" allowing you to write better ```css```, ```less``` and
 
 The numbering is based upon the [node](https://hub.docker.com/_/node) version.
 
-* ```alpine```, ```10-alpine``` [Dockerfile](https://github.com/willhallonline/docker-stylelint/blob/master/node10/alpine/Dockerfile)
+* ```latest```, ```alpine```, ```10-alpine``` [Dockerfile](https://github.com/willhallonline/docker-stylelint/blob/master/node10/alpine/Dockerfile)
 * ```stretch```, ```10-stretch``` [Dockerfile](https://github.com/willhallonline/docker-stylelint/blob/master/node10/stretch/Dockerfile)
 * ```8-alpine``` [Dockerfile](https://github.com/willhallonline/docker-stylelint/blob/master/node8/alpine/Dockerfile)
 * ```8-stretch``` [Dockerfile](https://github.com/willhallonline/docker-stylelint/blob/master/node8/stretch/Dockerfile)
