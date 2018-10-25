@@ -1,12 +1,12 @@
-FROM node
+FROM node:10-stretch
 MAINTAINER Will Hall <will@willhallonline.co.uk>
 
 # Get required stylelint packages
 RUN npm install -g stylelint stylelint-config-standard
 
 # Setup stylelint entrypoint and default styleint
-COPY ./.stylelintrc /root/.stylelintrc
-COPY ./stylelint.sh /root/stylelint.sh
+COPY ../../.stylelintrc /root/.stylelintrc
+COPY ../../stylelint.sh /root/stylelint.sh
 RUN chmod +x /root/stylelint.sh
 
 WORKDIR /app
