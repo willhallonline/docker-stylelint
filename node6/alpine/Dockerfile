@@ -12,14 +12,15 @@ LABEL maintainer="will@willhallonline.co.uk" \
     org.label-schema.docker.cmd="docker run --rm -it -v $(pwd):/app willhallonline/stylelint:6-alpine"
 
 # Get required stylelint packages
-RUN npm install -g stylelint stylelint-config-standard
+RUN npm install -g stylelint stylelint-config-standard \
+    && mkdir -p /stylelint
 
 # Setup stylelint entrypoint and default styleint
-COPY .stylelintrc /root/.stylelintrc
-COPY stylelint.sh /root/stylelint.sh
-RUN chmod +x /root/stylelint.sh
+COPY .stylelintrc /stylelint/.stylelintrc
+COPY stylelint.sh /stylelint/stylelint.sh
+RUN chmod +x /stylelint/stylelint.sh
 
 WORKDIR /app
 
 # Entrypoint for creation of .stylelintrc if not in existence
-ENTRYPOINT ["/root/stylelint.sh"]
+ENTRYPOINT ["/stylelint/stylelint.sh"]
