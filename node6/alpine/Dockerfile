@@ -23,4 +23,4 @@ RUN chmod +x /stylelint/stylelint.sh
 WORKDIR /app
 
 # Entrypoint for creation of .stylelintrc if not in existence
-ENTRYPOINT ["/stylelint/stylelint.sh"]
+CMD ["/stylelint/stylelint.sh"]

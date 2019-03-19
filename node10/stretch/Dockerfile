@@ -21,4 +21,4 @@ COPY stylelint.sh /stylelint/stylelint.sh
 RUN chmod +x /stylelint/stylelint.sh
 
 # Entrypoint for creation of .stylelintrc if not in existence
-ENTRYPOINT ["/stylelint/stylelint.sh"]
+CMD ["/stylelint/stylelint.sh"]
